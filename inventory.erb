@@ -17,6 +17,11 @@ openshift_hosted_metrics_deploy=false
 [masters]
 console.localdomain openshift_schedulable=false
 
+# host group for etcd
+[etcd]
+console.localdomain
+
 [nodes]
-node01.localdomain openshift_node_labels="{'region': 'infra', 'zone': 'default'}" openshift_schedulable=true
+console.localdomain openshift_node_labels="{'region': 'infra', 'zone': 'default'}" openshift_schedulable=false
+node01.localdomain openshift_node_labels="{'region': 'eu', 'zone': 'south'}" openshift_schedulable=true
 node02.localdomain openshift_node_labels="{'region': 'eu', 'zone': 'east'}" openshift_schedulable=true
