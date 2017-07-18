@@ -9,8 +9,8 @@ openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 
 containerized=true
 openshift_release=v1.5.0
 openshift_image_tag=v1.5.0
-openshift_public_hostname=console.localdomain
-openshift_master_default_subdomain=apps.console.localdomain
+openshift_public_hostname=console.trifonnt.com
+openshift_master_default_subdomain=apps.console.trifonnt.com
 openshift_hosted_metrics_deploy=true
 
 #openshift_master_overwrite_named_certificates=true
@@ -18,13 +18,13 @@ openshift_hosted_metrics_deploy=true
 
 
 [masters]
-console.localdomain openshift_schedulable=false
+console.trifon openshift_schedulable=false
 
 # host group for etcd
 [etcd]
-console.localdomain
+console.trifonnt.com
 
 [nodes]
-console.localdomain openshift_node_labels="{'region': 'infra', 'zone': 'default'}" openshift_schedulable=false
-node01.localdomain openshift_node_labels="{'region': 'eu', 'zone': 'south'}" openshift_schedulable=true
-node02.localdomain openshift_node_labels="{'region': 'eu', 'zone': 'east'}" openshift_schedulable=true
+console.trifonnt.com openshift_node_labels="{'region': 'infra', 'zone': 'default'}" openshift_schedulable=false
+node01.trifonnt.com openshift_node_labels="{'region': 'eu', 'zone': 'south'}" openshift_schedulable=true
+node02.trifonnt.com openshift_node_labels="{'region': 'eu', 'zone': 'east'}" openshift_schedulable=true
