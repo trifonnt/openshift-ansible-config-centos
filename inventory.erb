@@ -4,10 +4,11 @@ nodes
 
 [OSEv3:vars]
 ansible_ssh_user=root
+#ansible_become=true  ## if non root user is used
 deployment_type=origin
 openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
 containerized=false
-openshift_release=v1.5.1
+openshift_release=v1.4
 openshift_image_tag=v1.5.1
 openshift_public_hostname=console.trifonnt.com
 openshift_master_default_subdomain=apps.trifonnt.com
